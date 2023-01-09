@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 90px;
+  background-color: #EDF2F8;
+  overflow: scroll;
+  color: white;
+}
+h1 {
+  font-size: 20px;
+  /* font-weight: 600; */
+  font-weight: 500;
+}
+p {
+  font-size: 13px;
+  line-height: 125%;
+}
+.grid {
+  position: absolute;
+  width: 80%;
+  top: 15%;
+  bottom: 15%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+    "dan dan jon kira"
+    "jean pat pat kira";
+  column-gap: 25px;
+  row-gap: 25px;
+}
+.daniel {
+  background-color: #733EC9;
+  grid-area: dan;
+}
+.jonathan {
+  background-color: #49556A;
+  grid-area: jon;
+}
+.jeanette {
+  background-color: white;
+  grid-area: jean;
+  color: black;
+}
+.patrick {
+ background-color: #17202F;
+ grid-area: pat;
+}
+.kira {
+  background-color: white;
+  grid-area: kira;
+  color: black;
+}
+#testimonial {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 35px 30px 35px;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+}
+.nameface {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  align-items: center;
+  z-index: 2;
+}
+.avatar {
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  border: 1px solid rgb(255, 255, 255, 0.5);
+}
+.quotebox {
+  position: absolute;
+  top: 0;
+  left: 35%;
+  right: 0;
+  margin: 0 auto;
+  z-index: 0;
+}
+.quote {
+  position: absolute;
+  /* margin-bottom: 100%; */
+  /* justify-self: flex-start; */
+  /* align-self: flex-end; */
+}
+.maintag {
+  z-index: 2;
+}
+.namelvl {
+  margin-left: 15px;
+}
+.title {
+  opacity: 0.5;
+}
+.review {
+  opacity: 0.7;
+}
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, minmax(240px, 1fr)) ;
+    grid-template-areas: 
+      "dan"
+      "dan"
+      "jon"
+      "jean"
+      "pat"
+      "pat"
+      "kira"
+      "kira";
+    row-gap: 25px;
+    width: 85%;
+    top: 10%;
+  }
+  .quotebox {
+    left: 55%;
+  }
+}
